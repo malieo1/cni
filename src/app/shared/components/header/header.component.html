@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+       <button mat-icon-button (click)="toggleSideBar()">
+           <mat-icon>menu</mat-icon>
+       </button>
+       
+       <span>logo</span>
+       <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+           <ul fxLayout="row" fxLayoutGap="20px">
+               <li>
+                <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="recherche...">
+                <button mat-button type="submit" class="btn btn-round btn-just-icon">
+                    <mat-icon>search</mat-icon>
+                    <div class="ripple-container"></div>
+                </button>
+                </div>
+               </li>
+               <li>
+                   <button mat-icon-button>
+                       <mat-icon>settings</mat-icon>
+                   </button>
+                </li>
+               <li>
+                   <button mat-button [matMenuTriggerFor]="menu">
+                       <mat-icon>person_outline</mat-icon>
+                   </button>
+                   <mat-menu #menu="matMenu">
+                       <button mat-menu-item>
+                           <mat-icon>exit_to_app</mat-icon>
+                           exit
+                       </button>
+                   </mat-menu>
+               </li>
+           </ul>
+       </div>
+    </mat-toolbar-row>
+</mat-toolbar>
