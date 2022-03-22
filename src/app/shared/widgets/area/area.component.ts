@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
+import HC_exporting from 'highcharts/modules/exporting';
+
+
 
 
 @Component({
@@ -28,13 +31,13 @@ export class AreaComponent implements OnInit {
     yAxis: [{
         className: 'highcharts-color-0',
         title: {
-            text: 'Primary axis'
+            text: 'nombre des employés'
         }
     }, {
         className: 'highcharts-color-1',
         opposite: true,
         title: {
-            text: 'Secondary axis'
+            text: 'axe de temps'
         }
     }],
 
@@ -52,7 +55,13 @@ export class AreaComponent implements OnInit {
     }]
 
     }; 
-  }
-}
+    HC_exporting(Highcharts);
 
+    setTimeout (() => {
+      window.dispatchEvent (
+        new Event ('resize')
+      );
+    },20);
+  };
+}
 

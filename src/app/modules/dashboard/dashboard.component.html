@@ -1,15 +1,107 @@
-<div>
-    line charts
-    <div>line chart</div>
-    <div>line chart</div>
+<br>
+<div fxLayout="row" fxLayout="space-between center" fxLayoutGap="120px" class="stats-card">
+    <mat-card fxFlex="25">
+        <div class="main-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                            <div class="card-header card-header-warning card-header-icon">
+                                <div class="card-icon">
+                                    <i class="material-icons">content_copy</i>
+                                </div>
+                                <p class="card-category">Les Utilisateurs</p>
+                                <h3 class="card-title">nombre des Utilisateurs ghadi</h3>
+                            </div>
+                            <div class="card-footer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </mat-card>
+    <mat-card fxFlex="25">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header card-header-success card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">groupes existant</i>
+                    </div>
+                    <p class="card-category">Rnb des groupes</p>
+                    <h3 class="card-title">6</h3>
+                </div>
+                <div class="card-footer">
+                </div>
+            </div>
+        </div>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header card-header-danger card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">info_outline</i>
+                    </div>
+                    <p class="card-category">Fixed Issues</p>
+                    <h3 class="card-title">75</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">local_offer</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card>
 </div>
-<mat-divider></mat-divider>
+    <br>
+        <mat-divider></mat-divider>
+    <br>
+    <br>
+        <div fxLayout="row" fxLayout="space-between center" fxLayoutGap="40px" class="stats-card">
+            <app-area></app-area>
+            <app-piechart fxFlex="20"></app-piechart>
+        </div>
+    <br>
 
-<div>
-<app-area></app-area>
+        <mat-divider></mat-divider>
 
-</div>
 
-<mat-divider></mat-divider>
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+      <div fxFlex="60">
+        <table mat-table class="mat-elevation-z8">
 
-<div>table</div>
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> No. </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="weight">
+              <th mat-header-cell *matHeaderCellDef> Weight </th>
+              <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="symbol">
+              <th mat-header-cell *matHeaderCellDef> Symbol </th>
+              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          
+          
+      </div>
+    </div>

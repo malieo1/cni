@@ -13,6 +13,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { MatListModule } from "@angular/material/list";
 import { AreaComponent } from './widgets/area/area.component';
 import { HighchartsChartModule } from 'highcharts-angular';
+import { PiechartComponent } from './widgets/piechart/piechart.component';
+
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import { HighchartsChartModule } from 'highcharts-angular';
     FooterComponent,
     SidebarComponent,
     AreaComponent,
+    PiechartComponent,
+    
   ],
   imports: [
     CommonModule,
@@ -33,13 +37,16 @@ import { HighchartsChartModule } from 'highcharts-angular';
     MatListModule,
     RouterModule,
     MatButtonModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
     AreaComponent,
+    PiechartComponent,
+    
   ]
 })
 export class SharedModule { }
