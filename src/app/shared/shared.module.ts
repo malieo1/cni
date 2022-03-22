@@ -14,6 +14,8 @@ import { MatListModule } from "@angular/material/list";
 import { AreaComponent } from './widgets/area/area.component';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { PiechartComponent } from './widgets/piechart/piechart.component';
+import {MatTableModule} from '@angular/material/table';
+
 
 
 
@@ -38,6 +40,7 @@ import { PiechartComponent } from './widgets/piechart/piechart.component';
     RouterModule,
     MatButtonModule,
     HighchartsChartModule,
+    MatTableModule
     
   ],
   exports: [

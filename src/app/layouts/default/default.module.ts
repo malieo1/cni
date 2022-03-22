@@ -13,6 +13,9 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatListModule } from "@angular/material/list";
 import { MatCardModule } from "@angular/material/card";
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatTableModule} from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+
 
 
 
@@ -35,7 +38,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     FlexLayoutModule,
     MatCardModule,
     MatFormFieldModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTableModule,
+    MatSortModule
   ],
+  exports :[  
+    MatTableModule,
+    MatSortModule
+  ]
 })
 export class DefaultModule {}

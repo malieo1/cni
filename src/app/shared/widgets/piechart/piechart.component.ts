@@ -20,7 +20,7 @@ export class PiechartComponent implements OnInit {
     },
 
     title: {
-        text: 'Pie point CSS'
+        text: 'Nombre des employés par groupes'
     },
 
     xAxis: {
@@ -32,14 +32,14 @@ export class PiechartComponent implements OnInit {
         allowPointSelect: true,
         keys: ['name', 'y', 'selected', 'sliced'],
         data: [
-            ['Apples', 29.9, false],
-            ['Pears', 71.5, false],
-            ['Oranges', 106.4, false],
-            ['Plums', 129.2, false],
-            ['Bananas', 144.0, false],
-            ['Peaches', 176.0, false],
-            ['Prunes', 135.6, true, true],
-            ['Avocados', 148.5, false]
+            ['groupe 1', 29.9, false],
+            ['groupe 2', 71.5, false],
+            ['groupe 3', 106.4, false],
+            ['groupe 4', 129.2, false],
+            ['groupe 5', 144.0, false],
+            ['groupe 6 ', 176.0, false],
+            ['groupe maghzoun', 135.6, true, true],
+            ['groupe 8', 148.5, false]
         ],
         showInLegend: true
     }]
